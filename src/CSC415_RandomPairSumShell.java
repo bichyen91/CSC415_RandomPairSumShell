@@ -1,4 +1,3 @@
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
@@ -73,21 +72,9 @@ public class CSC415_RandomPairSumShell {
         printTimeStamp("Execution ended (Using HashSet)");
     }
 
-    private static void printArr(int[] arr) {
-        System.out.println("Random array: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + "\t");
-            if (i != 0 && i % 10 == 0) {
-                System.out.println("");
-            }
-        }
-        System.out.println("\n");
-    }
-
     public static void main(String[] args) {
         int[] randomNumbers = generateRandomArray(250000, 1, 2000000);
         int targetSum = 317;
-        //printArr(randomNumbers);
         System.out.println("Target: " + targetSum + "\n");
 
         System.out.println("Finding pairs without extra storage:");
@@ -97,3 +84,16 @@ public class CSC415_RandomPairSumShell {
         findPairsWithHashSet(randomNumbers, targetSum);
     }
 }
+
+
+
+//    private static void printArr(int[] arr) {
+//        System.out.println("Random array: ");
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + "\t");
+//            if (i != 0 && i % 10 == 0) {
+//                System.out.println("");
+//            }
+//        }
+//        System.out.println("\n");
+//    }
